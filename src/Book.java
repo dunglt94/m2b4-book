@@ -1,8 +1,8 @@
 public class Book {
-    String bookCode;
-    String name;
-    int price;
-    String author;
+    private String bookCode;
+    private String name;
+    private int price;
+    private String author;
 
     public Book() {};
     public Book(String bookCode, String name, int price, String author) {
@@ -35,5 +35,18 @@ public class Book {
     }
     public void setAuthor(String author) {
         this.author = author;
+    }
+    public int getAmount() {
+        return this.price;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "Mã sách='" + bookCode + '\'' +
+                ", Tên sách='" + name + '\'' +
+                ", Giá sách=" + price +
+                ", Tác giả='" + author + '\'' +
+                '}';
     }
 }
